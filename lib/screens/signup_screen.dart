@@ -118,27 +118,26 @@ class SignUpScreen extends StatelessWidget {
                       "username": "usrname-1"
                     };
                     apiCalling(signUpData);
-                    SharedPreferences prefs =
-                        await SharedPreferences.getInstance();
+                    // SharedPreferences prefs =
+                    //     await SharedPreferences.getInstance();
 
-                    var check = prefs.getBool("signup");
+                    // var check = prefs.getBool("signup");
 
-                    if (check == true) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
-                        ),
-                      );
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text(
-                            'Oops Something went wrong',
-                          ),
-                        ),
-                      );
-                    }
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const HomeScreen(),
+                      ),
+                    );
+                    // } else {
+                    //   ScaffoldMessenger.of(context).showSnackBar(
+                    //     const SnackBar(
+                    //       content: Text(
+                    //         'Oops Something went wrong',
+                    //       ),
+                    //     ),
+                    //   );
+                    // }
                   },
                   child: Container(
                     height: 58,
